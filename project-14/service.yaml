@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"project14-service","namespace":"default"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"project14-app"},"type":"LoadBalancer"}}
+  creationTimestamp: "2026-11-20T06:33:39Z"
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  name: project14-service
+  namespace: default
+  resourceVersion: "73373"
+  uid: c6d97451-f232-4b17-b042-0a2229d3bca0
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.100.97.162
+  clusterIPs:
+  - 10.100.97.162
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31278
+    port: 80
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: project14-app
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - hostname: ac6d97451f2324b17b0420a2229d3bca-1519187742.us-east-1.elb.amazonaws.com

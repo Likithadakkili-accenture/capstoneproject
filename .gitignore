@@ -19,3 +19,6 @@ override.tf.json
 # Credentials
 *.pem
 *.key
+
+eksctl
+*.tar.gz
