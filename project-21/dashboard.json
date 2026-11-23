@@ -1,0 +1,18 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "metrics": [
+          ["AWS/EC2", "CPUUtilization", "InstanceId", "i-06ab056c43a9e647e"]
+        ],
+        "period": 300,
+        "stat": "Average",
+        "region": "us-east-1",
+        "title": "EC2 CPU Utilization"
+      }
+    }
+  ]
+}
